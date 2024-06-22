@@ -1,0 +1,136 @@
+\documentclass[a4paper]{report}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{biolinum}
+\usepackage[french]{babel}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage[headheight=13pt,top=3cm, bottom=2cm, left=1cm, right=1cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black,
+}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[L]{Exakis Nelite}
+\fancyfoot[C]{\textbf{\thepage}}
+\fancyfoot[R]{Année universitaire: 2023/2024}
+\author{AMIAR Abd rezak}
+\date{Wednesday, June 26th 2024}
+\usepackage{subfiles}
+
+\begin{document}
+
+\subfile{sections/title.tex}
+
+\pagenumbering{roman} \setcounter{page}{1}
+
+\begin{doublespace}
+	\chapter*{\centering Remerciements}
+	\addcontentsline{toc}{chapter}{Remerciements}
+	\subfile{sections/remerciements.tex}
+
+	\chapter*{\centering Résumé}
+	\addcontentsline{toc}{chapter}{Résumé}
+	\subfile{sections/resume.tex}
+
+	\chapter*{\centering Abstract}
+	\addcontentsline{toc}{chapter}{Abstract}
+	\subfile{sections/abstract.tex}
+\end{doublespace}
+
+\tableofcontents
+\fancyhead[R]{\textbf{Table des matières}}
+\fancyhead[L]{\hspace*{5cm}}
+
+\listoffigures
+\fancyhead[R]{\textbf{Table des figures}}
+\fancyhead[L]{\hspace*{5cm}}
+
+
+\begin{doublespace}
+	\chapter*{\centering Introduction générale}
+	\addcontentsline{toc}{chapter}{Introduction générale}
+	\subfile{sections/introduction.tex}
+
+	\chapter*{\centering Liste des abréviations}
+	\addcontentsline{toc}{chapter}{Liste des abréviations}
+	\begin{itemize}
+		  \item[•] \textbf{UPEC:} Université Paris Est Créteil.
+		  \item[•] \textbf{EXN:} Exakis Nelite.
+            \item[•] \textbf{IA:} Intelligence Artificielle.
+            \item[•] \textbf{IoT:} Internet of Things.
+            \item[•] \textbf{SLM:} Service Line Manager.
+            \item[•] \textbf{SDM:} Service Delivery Manager.
+            \item[•] \textbf{SI:} Systeme d'Information.
+            \item[•] \textbf{M365:} Microsoft365.
+            \item[•] \textbf{CIS:} Center for Internet Security.
+		  \item[•] \textbf{SF:} Security Framework/Baseline.
+            \item[•] \textbf{POC:} Proof Of Concept. 
+		  \item[•] \textbf{CI:} Continuous Integration.
+		  \item[•] \textbf{CD:} Continuous Deployement.
+            \item[•] \textbf{LLM:} Large Language Models.
+	\end{itemize}
+
+	\newpage
+ 
+	\chapter*{\centering Terminologie}
+	\addcontentsline{toc}{chapter}{Terminologie}
+	\begin{itemize}
+    \item[•] \textbf{Tenant:} Un tenant est une instance dédiée d'un service cloud utilisé par une organisation. Il permet de séparer les données et les configurations d'une organisation de celles des autres utilisateurs du service.
+    
+    \item[•] \textbf{Azure:} Azure est la plateforme de cloud computing de Microsoft. Elle offre une variété de services cloud, y compris le calcul, l'analytics, le stockage et le réseautage. Azure permet aux entreprises de développer, tester, déployer et gérer des applications et des services à travers des centres de données gérés par Microsoft.
+    
+    \item[•] \textbf{Microsoft Entra ID:} Anciennement connu sous le nom d'Azure Active Directory (Azure AD), Microsoft Entra ID est un service de gestion des identités et des accès basé sur le cloud. Il permet aux organisations de gérer les identités et de contrôler l'accès aux ressources.
+    
+    \item[•] \textbf{Audit:} Un audit est un examen systématique et indépendant des configurations, des pratiques et des opérations d'un système pour s'assurer qu'elles sont conformes aux politiques, aux procédures et aux exigences réglementaires.
+    
+    \item[•] \textbf{CIS:} Le Center for Internet Security (CIS) est une organisation à but non lucratif qui développe des normes et des meilleures pratiques pour sécuriser les systèmes et les données. Les benchmarks CIS sont des configurations de sécurité recommandées pour les systèmes informatiques.
+    
+    \item[•] \textbf{Prompt Flow:} Dans le contexte de l'IA et du traitement du langage naturel, le prompt flow se réfère à la manière dont les invites (prompts) sont formulées et enchaînées pour obtenir des réponses cohérentes et pertinentes d'un modèle de langage.
+
+	\end{itemize}
+
+    \newpage
+    
+	\pagenumbering{arabic} \setcounter{page}{1}
+	\chapter{Présentation des organismes}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Présentation des organismes}}
+	\fancyhead[L]{\hspace*{5cm}}
+	\subfile{sections/chapitrePresentation.tex}
+
+	\chapter{Cadrage Fonctionnel}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Cadrage Fonctionnel}}
+	\fancyhead[L]{\hspace*{5cm}}
+	\subfile{sections/chapitreFonctionnel.tex}
+
+	\chapter{Cadrage Technique}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Cadrage Techniquee}}
+	\fancyhead[L]{\hspace*{5cm}}
+	\subfile{sections/chapitreTechnique.tex}
+
+	\chapter{Formations et Apprentissages}
+	\fancyhead[R]{\textbf{Chapitre \thechapter: Formations et Apprentissages}}
+	\fancyhead[L]{\hspace*{5cm}}
+	\subfile{sections/chapitreRealisation.tex}
+
+
+	\chapter*{\centering Conclusion et perspectives}
+	\addcontentsline{toc}{chapter}{Conclusion et perspectives}
+	\subfile{sections/chapitreConclusion.tex}
+ 
+	\newpage
+
+	\appendix
+	\pagenumbering{alph} \setcounter{page}{1}
+\end{doublespace}
+\end{document}
